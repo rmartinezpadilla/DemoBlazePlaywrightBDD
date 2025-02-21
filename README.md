@@ -14,12 +14,21 @@ Los métodos `async` se utilizan porque las acciones en Playwright son asíncron
 
 ## Configuración del Proyecto
 
+## Primeros pasos, instalación de depdendencias
+- npm i playwright
+- npm init playwright@latest (pasos dentro de la instalación: javascript,git rue, end to end test—> test)
+- npm i -D playwright-bdd
+- npm i -D @cucumber/cucumber@latest
+- npm install @faker-js/faker
+
 ### Dependencias Principales (`package.json`)
 El archivo `package.json` incluye:
 - `@playwright/test`: Para la ejecución de pruebas con Playwright.
 - `playwright-bdd`: Para la integración con archivos `.feature`.
 - `@cucumber/cucumber`: Para usar Gherkin en los tests.
 - `@faker-js/faker`: Para generar datos aleatorios en las pruebas.
+
+
 
 ```json
 "dependencies": {
