@@ -162,8 +162,3 @@ Then('se visualiza el nombre de usuario en la barra de navegación', async ({ lo
 
 ### `BDD config not found for testDir`
 Si aparece este error, verifica que `bdd.config.js` esté bien definido y que `testDir` en `playwright.config.js` use `defineBddConfig`.
-
----
-
-Esta documentación cubre la configuración, estructura y ejecución de pruebas en tu proyecto **Playwright BDD**. 🚀 ¡Listo para automatizar!
-
