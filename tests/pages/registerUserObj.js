@@ -2,6 +2,7 @@ import { expect } from '@playwright/test';
 import { faker } from "@faker-js/faker";
 
 const email = faker.internet.email();
+const email_existente = "Erick.Kling0@yahoo.com"; // Ajustar con un usuario válido
 
 export class RegisterUserPage {
     constructor(page)   {
@@ -24,6 +25,10 @@ export class RegisterUserPage {
         const email = faker.internet.email(); // 🔹 Genera un email aleatorio en cada prueba
         await this.inputName.fill(email);
         console.log(`📝 Email generado: ${email}`); // Opcional: imprime el email en la consola
+    }
+
+    async escribirUsuarioExistente() {        
+        await this.inputName.fill(email_existente);        
     }
 
     async escribirClave(clave) {

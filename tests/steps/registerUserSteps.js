@@ -23,6 +23,13 @@ When('completo el formulario de registro con usuario y clave {string}', async ({
         await registerUserPage.escribirUsuario();
         await registerUserPage.escribirClave(clave);
     });
+
+    When('completo el formulario de registro con y clave', async ({ registerUserPage }) => {
+        // Step: When completo el formulario de registro con y clave
+        // From: tests/features/registerUser.feature:20:9
+        await registerUserPage.escribirUsuarioExistente();
+        await registerUserPage.escribirClave("password123");
+    });
     
 When('le doy clic al boton sign up del formulario', async ({ registerUserPage }) => {
         // Step: And le doy clic al boton sign up del formulario
