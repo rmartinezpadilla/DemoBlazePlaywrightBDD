@@ -39,6 +39,15 @@ export class LoginUserPage {
         
     }
 
+    async ingresarClaveNoRegistrada() {
+        const email_registrado = "Erick.Kling0@yahoo.com"
+        console.log(`Usuario registrado: ${email_registrado}`)
+        await this.inputUsername.fill(email_registrado);
+        const clave = "no_existe_la_clave"; // Ajustar con un usuario válido
+        console.log(`Clave no registrada: ${clave}`)
+        await this.inputPassword.fill(clave);        
+    }
+
     async clicBtnLoginForm() {
         await this.btnLoginForm.click();
     }

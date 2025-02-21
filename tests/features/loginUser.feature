@@ -15,9 +15,16 @@ Feature: Iniciar sesión en DemoBlaze.com
         And le doy clic al boton log in del formulario
         Then se visualiza el nombre de usuario en la barra de navegación
 
-    @loginFallido
-        Scenario: Iniciar sesión con credenciales inválidas            
+    @loginFallidoConUsuarioInválido
+        Scenario: Iniciar sesión con usuario inválido
             And le doy clic al boton log in
             When se ingresa el usuario no registrado y su clave
             And le doy clic al boton log in del formulario
             Then visualizo el mensaje "User does not exist." en el mensaje de alerta
+
+    @loginFallidoConClaveInválida
+        Scenario: Iniciar sesión con clave inválida
+            And le doy clic al boton log in
+            When se ingresa el usuario registrado y su clave no valida
+            And le doy clic al boton log in del formulario
+            Then visualizo el mensaje "Wrong password." en el mensaje de alerta

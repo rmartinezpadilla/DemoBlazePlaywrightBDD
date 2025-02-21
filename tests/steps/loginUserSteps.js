@@ -20,7 +20,13 @@ const { Given, When, Then } = createBdd(test);
             // Step: When se ingresa el usuario registrado y su clave
             // From: tests/features/loginUser.feature:11:9
             await loginUserPage.ingresarUsuarioNoRegistrado();
-        });    
+        });
+        
+        When('se ingresa el usuario registrado y su clave no valida', async ({ loginUserPage }) => {
+            // Step: When se ingresa el usuario registrado y su clave no valida
+            // From: tests/features/loginUser.feature:28:13
+            await loginUserPage.ingresarClaveNoRegistrada();
+        });
         
     When('le doy clic al boton log in del formulario', async ({ loginUserPage }) => {
             // Step: And le doy clic al boton log in del formulario
