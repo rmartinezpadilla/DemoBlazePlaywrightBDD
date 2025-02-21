@@ -17,6 +17,6 @@ Feature: Registrarse en DemoBlaze.com
     @ValidarUsuarioExistente
     Scenario: Confirmar la existencia de un usuario en DemoBlaze.com                
         And le doy clic al boton sign up
-        When completo el formulario de registro con y clave
+        When ingreso el email registrado "Erick.Kling0@yahoo.com" y su clave "password123" registrados
         And le doy clic al boton sign up del formulario
         Then visualizo el mensaje "This user already exist." en el mensaje de alerta
