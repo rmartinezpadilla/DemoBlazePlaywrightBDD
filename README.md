@@ -9,6 +9,9 @@ Este proyecto utiliza **Playwright** junto con **Playwright-BDD** para la automa
 ### ¿Qué es Playwright-BDD?
 [Playwright-BDD](https://www.npmjs.com/package/playwright-bdd) es una librería que permite ejecutar pruebas en Playwright usando archivos **.feature** con la sintaxis de **Gherkin**, integrando **Cucumber** con Playwright.
 
+### ¿Qué es BDD?
+BDD es Behavior Driven Development, o lo que es lo mismo en español, desarrollo guiado por comportamiento. Es un proceso de software ágil que busca la colaboración y entendimiento entre desarrolladores, gestores de proyecto y equipo de negocio. Es decir, es el camino para tomar antes de la fase de testing de un proyecto.
+
 ### Uso de `async`
 Los métodos `async` se utilizan porque las acciones en Playwright son asíncronas y devuelven **promesas**. Esto permite esperar a que se completen sin bloquear la ejecución del código.
 
