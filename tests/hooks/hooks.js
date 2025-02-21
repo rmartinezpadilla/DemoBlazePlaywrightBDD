@@ -1,4 +1,3 @@
-import { chromium, firefox } from '@playwright/test';
 import { createBdd } from 'playwright-bdd';
 import fs from 'fs';
 import path from 'path';
