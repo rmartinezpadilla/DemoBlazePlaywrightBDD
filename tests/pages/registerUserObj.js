@@ -12,6 +12,7 @@ export class RegisterUserPage {
 
     async navegarHaciaPagina(url)   {
         await this.page.goto(url);
+        // await this.page.pause(); Aplicamos esta linea de código por si queremos evidenciar el comportamiento paso a paso cuando se abra la página
     }
 
     async clicBtnSignUpMain()   {
