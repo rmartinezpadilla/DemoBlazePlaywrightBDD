@@ -15,6 +15,12 @@ const { Given, When, Then } = createBdd(test);
             // From: tests/features/loginUser.feature:11:9
             await loginUserPage.ingresarUsuario();
         });
+    
+    When('se ingresa el usuario no registrado y su clave', async ({ loginUserPage }) => {
+            // Step: When se ingresa el usuario registrado y su clave
+            // From: tests/features/loginUser.feature:11:9
+            await loginUserPage.ingresarUsuarioNoRegistrado();
+        });    
         
     When('le doy clic al boton log in del formulario', async ({ loginUserPage }) => {
             // Step: And le doy clic al boton log in del formulario

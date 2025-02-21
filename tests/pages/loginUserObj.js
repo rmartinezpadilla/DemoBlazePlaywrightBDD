@@ -1,7 +1,7 @@
 import { expect } from '@playwright/test';
+import { faker } from "@faker-js/faker";
 
-const email = "Erick.Kling0@yahoo.com"; // Ajustar con un usuario válido
-
+const email = "Erick.Kling0@yahoo.com"; // Ajustar con un usuario válido    
 export class LoginUserPage {
     constructor(page) {
         this.page = page;
@@ -20,9 +20,21 @@ export class LoginUserPage {
         await this.btnLoginMain.click();
     }
 
-    async ingresarUsuario() {        
+    async ingresarUsuario() {                 
+        console.log(`Usuario no registrado usado: ${email}`)
         await this.inputUsername.fill(email);
         const clave = "password123"; // Ajustar con un usuario válido
+        console.log(`Clave registrada: ${clave}`)
+        await this.inputPassword.fill(clave);
+        
+    }
+
+    async ingresarUsuarioNoRegistrado() {
+        const email_no_registrado = "no_existe_2025_tes@test.qa.com"
+        console.log(`Usuario no registrado usado: ${email_no_registrado}`)
+        await this.inputUsername.fill(email_no_registrado);
+        const clave = "no_existe_la_clave"; // Ajustar con un usuario válido
+        console.log(`Clave no registrada: ${clave}`)
         await this.inputPassword.fill(clave);
         
     }

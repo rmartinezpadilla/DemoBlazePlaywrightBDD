@@ -12,7 +12,7 @@ Before(async({page})=>{
 
 After(async()=>{
     console.log("This is a After.")
-    console.log("❌ Cerrando la página después de cada escenario...");
+    console.log("❌ Cerrando la página...");
 });
 
 BeforeAll(async({browser})=>{    
