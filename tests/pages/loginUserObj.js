@@ -44,8 +44,12 @@ export class LoginUserPage {
     }
 
     async validarUsuarioLogueado() {        
+
         // Esperar a que el elemento de usuario esté visible
         await expect(this.navBarUserName).toBeVisible();
+
+        const mensajeBienvenida = await this.navBarUserName.textContent() || "No se encontró el usuario";
+        console.log("Mensaje capturado:", mensajeBienvenida);
 
         // Verificar que el texto contenga "Welcome"
         await expect(this.navBarUserName).toHaveText(`Welcome ${email}`);
