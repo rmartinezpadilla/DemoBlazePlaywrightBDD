@@ -1,4 +1,4 @@
-# Documentación del Proyecto Playwright BDD
+# Proyecto Playwright BDD
 
 ## Introducción
 Este proyecto utiliza **Playwright** junto con **Playwright-BDD** para la automatización de pruebas de UI basada en Behavior-Driven Development (**BDD**).
